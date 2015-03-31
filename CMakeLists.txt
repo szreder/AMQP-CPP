@@ -29,6 +29,8 @@ target_include_directories(amqp-cpp SYSTEM PUBLIC ${PROJECT_SOURCE_DIR})
 install(TARGETS amqp-cpp
         ARCHIVE DESTINATION lib
 )
+install(DIRECTORY include/ DESTINATION include/amqpcpp FILES_MATCHING PATTERN "*.h")
+install(FILES amqpcpp.h DESTINATION include/)
 
 set(AMQP-CPP_INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 set(AMQP-CPP_INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
